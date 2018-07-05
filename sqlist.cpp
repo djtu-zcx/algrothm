@@ -6,7 +6,7 @@ typedef struct{
     ElemType data[MAX];
     int length;
 }Sqlist;
-
+// insert the element with location
 bool insertElem(Sqlist *l,int i,ElemType elem){
     if(l->length == MAX){
       return false;
@@ -24,7 +24,7 @@ bool insertElem(Sqlist *l,int i,ElemType elem){
       l->length++;
       return true;
 }
-
+// add element at the rar
 bool addElem(Sqlist *l,ElemType elem){
     if(l->length == MAX){
        return false;
@@ -46,14 +46,14 @@ bool deleteElem(Sqlist *l,int i,ElemType elem){
      return true;
 }
 }
-
+// search ELement by location
 ElemType searchElem(Sqlist *l,int i){
     if(i<1 || i>l->length)
         return 0;
     else
        return l->data[i];
 }
-
+//search location of element
 ElemType searchTheElem(Sqlist *l,ElemType e){
     for(int k = 0;k<l-length;k++){
          if(l->data[k] == e){
